@@ -6,11 +6,12 @@ const Image = ({ src, alt, className = "", w, h, ...props }) => {
       path={src}
       className={className}
       alt={alt}
-      props={props}
+      {...props}
       loading="lazy"
       lqip={{ active: true, quality: 20 }}
       width={w}
       height={h}
+      transformation={[{ width: w, height: h }]}
     />
   );
 };

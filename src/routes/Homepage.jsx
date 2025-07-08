@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import MainCategories from "../components/MainCategories";
+import FeaturedPosts from "../components/FeatutedPosts";
+import PostList from "../components/PostList";
 
 const Homepage = () => {
   return (
@@ -15,17 +17,18 @@ const Homepage = () => {
       {/*Introduction Section*/}
       <div className="flex item-center justify-between">
         {/* titles */}
-        <div className="">
+        <div className="w-3/4">
           <h1 className="text-gray-800 text-2xl md:text-5xl lg:text-6xl font-bold">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            ✅ Shadow Notes – Thoughts on IT, Games, Tech, Movies & Motivation
           </h1>
           <p className="mt-8 text-md md:text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas,
-            quaerat distinctio rerum cumque odio aliquam vitae vel
+            📝 A personal blog exploring the worlds of gaming, technology,
+            cinema, and self-growth. From news and reviews to insights and
+            inspiration — one place for everything that moves the mind forward.
           </p>
         </div>
         {/* animated button */}
-        <Link to="write" className="hidden md:block relative">
+        <Link to="write" className="hidden md:block relative w-50 h-50">
           <svg
             viewBox="0 0 200 200"
             width="200"
@@ -67,7 +70,12 @@ const Homepage = () => {
       {/*Main Category*/}
       <MainCategories />
       {/*Featured Posts Section*/}
+      <FeaturedPosts />
       {/*post list*/}
+      <div className="">
+        <h1 className="my-8 text-2xl text-gray-600">Recent Posts</h1>
+        <PostList />
+      </div>
     </div>
   );
 };
